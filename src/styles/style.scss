@@ -216,7 +216,6 @@ body {
 
 .toggle-left {
     transform: translateX(-200%);
-    // box-shadow: 0 10px 10px 10px #08152F;
     box-shadow: 25px 0px 68px 3px #28BFD2;
 }
 
@@ -228,4 +227,79 @@ body {
 #register, #login{
     background-color: $background-color_3;
     color: $background-color_1;
+}
+
+// ... other SCSS styles
+
+@media (max-width: 768px) {
+    .toggle-container{
+        width: 10%;
+        left: 90%;
+        
+        p, h1{
+            display: none;
+        }
+        button{
+            transform: rotate(90deg);
+            
+        }
+    }
+
+    .login-container.active {
+        .sign-in {
+            transform: translateX(100%);
+        }
+
+        .sign-up {
+            transform: translateX(10%);
+        }
+
+        .toggle-container {
+            transform: translateX(-900%);
+            // border-radius: 0 150px 100px 0;
+        }
+
+        .toggle {
+            transform: translateX(90%);
+        }
+
+        .toggle-left {
+            transform: translateX(0);
+        }
+
+        .toggle-right {
+            transform: translateX(200%);
+        }
+    }
+    .toggle {
+        left: -900%;
+        width: 1000%;
+        transform: translateX(0);
+    }
+
+    .toggle-panel {
+        width: 10%;
+        transform: translateX(0);
+    }
+
+    .toggle-left {
+        transform: translateX(-200%);
+        box-shadow: 25px 0px 68px 3px #28BFD2;
+    }
+
+    .toggle-right {
+        right: 0;
+        transform: translateX(0);
+        box-shadow: -25px 0px 68px 3px #28BFD2;
+    }
+    #login, #register{
+        background-color: $background-color_1;
+        color: $background-color_3;
+        line-height: 18px;
+        padding-top: 27px;
+    }
+    .sign-in, .sign-up{
+        width: 95%;
+    }
+
 }
