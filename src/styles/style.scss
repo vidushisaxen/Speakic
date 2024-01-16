@@ -45,7 +45,6 @@ body {
 }
 
 .login-container {
-    background-color: $background-color_2;
     position: relative;
     overflow: hidden;
     width: 100vw;
@@ -53,28 +52,28 @@ body {
     min-height: 100vh;
 
     p {
-        font-size: 14px;
+        font-size: 17px;
         line-height: 20px;
         letter-spacing: 0.3px;
         margin: 20px 0;
     }
 
     span {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     a {
         color: $color_1;
-        font-size: 13px;
+        font-size: 15px;
         text-decoration: none;
         margin: 15px 0 10px;
     }
 
     button {
-        background-color: $background-color_3;
+        background-color: $background-color_1;
         color: $color_2;
-        font-size: 12px;
-        padding: 10px 45px;
+        font-size: 18px;
+        padding: 8px 40px;
         border: 1px solid transparent;
         border-radius: 8px;
         font-weight: 600;
@@ -90,7 +89,7 @@ body {
     }
 
     form {
-        background-color: $background-color_2;
+        background-color: $background-color_3;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -106,7 +105,7 @@ body {
         padding: 10px 15px;
         font-size: 13px;
         border-radius: 8px;
-        width: 100%;
+        width: 70%;
         outline: none;
     }
 }
@@ -165,7 +164,7 @@ body {
     margin: 20px 0;
 
     a {
-        border: 1px solid #ccc;
+        border: 3px solid $background-color_1;
         border-radius: 20%;
         display: inline-flex;
         justify-content: center;
@@ -189,9 +188,8 @@ body {
 }
 
 .toggle {
-    background-color: $background-color_3;
+    background-color: $background-color_1;
     height: 100%;
-    background: linear-gradient(to right, #f8a25c, #e1ec3c);
     color: $color_2;
     position: relative;
     left: -100%;
@@ -218,9 +216,16 @@ body {
 
 .toggle-left {
     transform: translateX(-200%);
+    // box-shadow: 0 10px 10px 10px #08152F;
+    box-shadow: 25px 0px 68px 3px #28BFD2;
 }
 
 .toggle-right {
     right: 0;
     transform: translateX(0);
+    box-shadow: -25px 0px 68px 3px #28BFD2;
+}
+#register, #login{
+    background-color: $background-color_3;
+    color: $background-color_1;
 }
