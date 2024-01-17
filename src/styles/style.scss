@@ -4,7 +4,7 @@
 // @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
 
 $color_1: #08152F;
-$color_2: #D8EEFE;
+// $color_2: #D8EEFE;
 $font-family_1: 'Montserrat', sans-serif;
 $background-color_1: #28BFD2;
 $background-color_2: #CAEBFF;
@@ -13,3 +13,10 @@ $background-color_4: transparent;
 $background-color_5: #eee;
 $border-color_1: #fff;
 
+nav{
+    background-color: $background-color_1;
+    color: $background-color_3;
+}
+.nav-link:hover{
+    color: $color_1;
+}

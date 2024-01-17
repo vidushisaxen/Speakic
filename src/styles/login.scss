@@ -35,11 +35,6 @@ $border-color_1: #fff;
 
 body {
     background-color: $background-color_3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
 }
 
 .login-container {
@@ -48,6 +43,11 @@ body {
     width: 100vw;
     // max-width: 100%;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 
     p {
         font-size: 17px;
