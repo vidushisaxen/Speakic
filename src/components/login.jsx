@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "../styles/style.scss";
+import "../styles/login.scss";
 
 const Login = () => {
   const containerRef = useRef(null);
