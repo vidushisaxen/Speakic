@@ -5,7 +5,10 @@ const Navtop=()=>{
    return (
      <nav class="flex justify-between w-auto top-0 ml-0 fixed left-0 right-0">
        <div class="px-5 xl:px-12 py-6 flex w-full items-center">
-         <a class="text-3xl font-bold font-heading" href="#">
+         <a
+           class="text-3xl font-bold font-heading playfair-display"
+           href="#"
+         >
            <img class="" src="logo.png" alt="" />
            Speakic.
          </a>
