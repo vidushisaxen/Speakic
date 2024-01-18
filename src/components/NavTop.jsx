@@ -5,8 +5,11 @@ const Navtop=()=>{
    return (
      <nav class="flex justify-between w-auto top-0 ml-0 fixed left-0 right-0">
        <div class="px-5 xl:px-12 py-6 flex w-full items-center">
-         <a class="text-3xl font-bold font-heading" href="#">
-           <img class="" src="logo.png" alt=""/>
+         <a
+           class="text-3xl font-bold font-heading playfair-display"
+           href="#"
+         >
+           <img class="" src="logo.png" alt="" />
            Speakic.
          </a>
          <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
@@ -17,12 +20,17 @@ const Navtop=()=>{
            </li>
            <li>
              <a class="nav-link" href="#">
-               Catagory
+               Settings
              </a>
            </li>
            <li>
              <a class="nav-link" href="#">
-               Collections
+               Help
+             </a>
+           </li>
+           <li>
+             <a class="nav-link" href="#">
+               About Us
              </a>
            </li>
            <li>
