@@ -1,122 +1,99 @@
-import "../styles/navside.scss";
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import "../styles/navside.scss"; // Assuming SCSS is configured for React
 
 function NavSide() {
-  const toggleMenuRef = useRef(null);
-  const sideMenuRef = useRef(null);
-  const contentRef = useRef(null);
-  const barsRef = useRef([]);
-  const [activeMenuItem, setActiveMenuItem] = useState('About');
+  const [isClose, setIsClose] = useState(true);
+  const [isHoverable, setIsHoverable] = useState(false);
 
   useEffect(() => {
-    // Initial animation after 1 second
-    setTimeout(() => {
-      sideMenuRef.current.classList.add('resize');
-      contentRef.current.classList.add('resize');
-      toggleMenuRef.current.classList.add('active');
-      barsRef.current.forEach(bar => bar.classList.add('anim-bar'));
-    }, 1000);
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsClose(true);
+      } else {
+        setIsClose(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call initially
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleToggleMenu = () => {
-    sideMenuRef.current.classList.toggle('resize');
-    contentRef.current.classList.toggle('resize');
-    toggleMenuRef.current.classList.toggle('active');
-
-    barsRef.current.forEach(bar => {
-      bar.classList.add('anim-bar');
-      setTimeout(() => {
-        bar.classList.remove('anim-bar');
-      }, 1000);
-    });
+  const handleSidebarToggle = () => {
+    setIsClose(!isClose);
   };
 
-  const handleMenuItemClick = (item) => {
-    setActiveMenuItem(item);
-    // Close the menu after item selection (optional)
-    handleToggleMenu();
+  const handleSidebarMouseEnter = () => {
+    if (isHoverable) {
+      setIsClose(false);
+    }
+  };
+
+  const handleSidebarMouseLeave = () => {
+    if (isHoverable) {
+      setIsClose(true);
+    }
   };
 
   return (
-    <div>
-      <div className="nav-bar">
+    <nav
+      className={`sidebar ${isClose && "close"}`}
+      onMouseEnter={handleSidebarMouseEnter}
+      onMouseLeave={handleSidebarMouseLeave}
+    >
+      <ul class="menu_items">
+          <div class="menu_title menu_editor"></div>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bxs-magic-wand"></i>
+              </span>
+              <span class="navlink">Magic build</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-loader-circle"></i>
+              </span>
+              <span class="navlink">Filters</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-filter"></i>
+              </span>
+              <span class="navlink">Filter</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-cloud-upload"></i>
+              </span>
+              <span class="navlink">Upload new</span>
+            </a>
+          </li>
+        </ul>
+      <div className="bottom_content">
+        <div className="bottom expand_sidebar" onClick={handleSidebarToggle}>
+          <span>Expand</span>
+          <i className="bx bx-log-in"></i>
+        </div>
         <div
-          id="menuToggle"
-          className="toggle-menu active"
-          ref={toggleMenuRef}
-          onClick={handleToggleMenu}
+          className="bottom collapse_sidebar"
+          onClick={() => {
+            setIsClose(true);
+            setIsHoverable(true);
+          }}
         >
-          <span class="bar" ref={(el) => barsRef.current.push(el)}></span>
-          <span class="bar" ref={(el) => barsRef.current.push(el)}></span>
-          <span class="bar" ref={(el) => barsRef.current.push(el)}></span>
+          <span>Collapse</span>
+          <i className="bx bx-log-out"></i>
         </div>
       </div>
-      <div className="main">
-        <div id="sideMenu" className="side-menu" ref={sideMenuRef}>
-          <div className="menu-items">
-            <a
-              href="#"
-              className="item"
-              onClick={() => handleMenuItemClick("Home")}
-            >
-              Home
-            </a>
-            {/* ... Existing menu items ... */}
-            <a
-              href="#"
-              className="item"
-              onClick={() => handleMenuItemClick("Dashboard")}
-            >
-              Dashboard
-            </a>
-            <a
-              href="#"
-              className="item"
-              onClick={() => handleMenuItemClick("Project")}
-            >
-              Project
-            </a>
-            <a
-              href="#"
-              className="item"
-              onClick={() => handleMenuItemClick("Earning")}
-            >
-              Earning
-            </a>
-            <a href="#" className="item" onClick={() => handleMenuItemClick("Report")}>Report</a>
-            <a
-              href="#"
-              className="item"
-              onClick={() => handleMenuItemClick("Services")}
-            >
-              Services
-            </a>
-            {/* ... Existing menu items ... */}
-            <a
-              href="#"
-              className="item active"
-              onClick={() => handleMenuItemClick("About")}
-            >
-              About
-            </a>
-            <a
-              href="#"
-              className="item"
-              onClick={() => handleMenuItemClick("Help")}
-            >
-              Help
-            </a>
-            <a
-              href="#"
-              className="item"
-              onClick={() => handleMenuItemClick("Contact")}
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-        </div>
-    </div>
+    </nav>
   );
 }
 
