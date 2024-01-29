@@ -1,10 +1,19 @@
-$color_1: var(--blue-color);
-$color_2: var(--grey-color);
-$color_3: var(--white-color);
-$font-family_1: "Poppins", sans-serif;
-$background-color_1: #e7f2fd;
-$background-color_2: #333;
-$background-color_3: var(--white-color);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap';
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
+
+$color_1: #0000004d;
+$color_2: #F4C951;
+$color_3: rgb(44, 43, 43);
+$font-family_1: 'Montserrat', sans-serif;
+$background-color_1: #28BFD2;
+$background-color_2: #CAEBFF;
+$background-color_3: #D8EEFE;
+$background-color_4: transparent;
+$background-color_5: #eee;
+$border-color_1: #fff;
 
 /* Import Google font - Poppins */
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
@@ -18,99 +27,23 @@ $background-color_3: var(--white-color);
     font-family: $font-family_1;
 }
 
-:root {
-    --white-color: #fff;
-    --blue-color: #4070f4;
-    --grey-color: #707070;
-    --grey-color-light: #aaa;
-}
-
 body {
-    background-color: $background-color_1;
     transition: all 0.5s ease;
-}
-
-body.dark {
-    background-color: $background-color_2;
-    --white-color: #333;
-    --blue-color: #fff;
-    --grey-color: #f2f2f2;
-    --grey-color-light: #aaa;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;
-    background-color: $background-color_3;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-    z-index: 1000;
-    box-shadow: 0 0 2px var(--grey-color-light);
-
-    img {
-        width: 35px;
-        height: 35px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-}
-
-.logo_item {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-    font-size: 22px;
-    font-weight: 500;
-    color: $color_1;
-}
-
-.search_bar {
-    height: 47px;
-    max-width: 430px;
-    width: 100%;
-
-    input {
-        height: 100%;
-        width: 100%;
-        border-radius: 25px;
-        font-size: 18px;
-        outline: none;
-        background-color: $background-color_3;
-        color: $color_2;
-        border: 1px solid var(--grey-color-light);
-        padding: 0 20px;
-    }
-}
-
-.navbar_content {
-    display: flex;
-    align-items: center;
-    column-gap: 25px;
-
-    i {
-        cursor: pointer;
-        font-size: 20px;
-        color: $color_2;
-    }
 }
 
 .sidebar {
-    background-color: $background-color_3;
+    background-color: $background-color_1;
     width: 260px;
     position: fixed;
-    top: 0;
+    // top: 91px;
     left: 0;
-    height: 100%;
-    padding: 80px 20px;
-    z-index: 100;
+    height: 100vh;
+    padding: 3rem 2rem 8rem 2rem;
+    z-index: -1;
     overflow-y: scroll;
-    box-shadow: 0 0 1px var(--grey-color-light);
+    box-shadow: 0 0 1px $color_3;
     transition: all 0.5s ease;
-
+    // pa-top: 90px;
     &::-webkit-scrollbar {
         display: none;
     }
@@ -122,8 +55,10 @@ body.dark {
         padding: 4px 15px;
         border-radius: 8px;
         text-decoration: none;
-        color: $color_2;
+        color: $background-color_3;
         white-space: nowrap;
+        margin-bottom: 4rem;
+        font-size: x-large;
     }
 }
 
@@ -131,31 +66,15 @@ body.dark {
     padding: 60px 0;
     width: 80px;
 
-    .menu_title {
-        padding: 6px 30px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            height: 2px;
-            width: 18px;
-            border-radius: 12px;
-            background: var(--grey-color-light);
-        }
-    }
-
     .navlink {
         display: none;
     }
 
     .nav_link {
         &:hover {
-            background: var(--white-color);
+            background: $color_2;
+            color: $background-color_3;
         }
-    }
-
-    .submenu {
-        display: none;
     }
 
     .bottom_content {
@@ -170,47 +89,9 @@ body.dark {
     }
 }
 
-.menu_content {
-    position: relative;
-}
-
-.menu_title {
-    margin: 15px 0;
-    padding: 0 20px;
-    font-size: 18px;
-
-    &::before {
-        color: $color_2;
-        white-space: nowrap;
-    }
-}
-
-.menu_dahsboard {
-    &::before {
-        content: "Dashboard";
-    }
-}
-
-.menu_editor {
-    &::before {
-        content: "Editor";
-    }
-}
-
-.menu_setting {
-    &::before {
-        content: "Setting";
-    }
-}
-
-.menu_items {
-    padding: 0;
-    list-style: none;
-}
-
 .navlink_icon {
     position: relative;
-    font-size: 22px;
+    font-size: 2rem;
     min-width: 50px;
     line-height: 40px;
     display: inline-block;
@@ -226,45 +107,17 @@ body.dark {
     }
 
     &:hover {
-        background: var(--blue-color);
+        background: $color_2;
     }
 }
 
 .nav_link {
     &:hover {
         color: $color_3;
-        background: var(--blue-color);
+        background: $color_2;
     }
 }
 
-.submenu_item {
-    cursor: pointer;
-
-    .arrow-left {
-        position: absolute;
-        right: 10px;
-        display: inline-block;
-        margin-right: auto;
-    }
-}
-
-.submenu {
-    display: none;
-
-    .sublink {
-        padding: 15px 15px 15px 52px;
-    }
-}
-
-.show_submenu~.submenu {
-    display: block;
-}
-
-.show_submenu {
-    .arrow-left {
-        transform: rotate(90deg);
-    }
-}
 
 .bottom_content {
     position: fixed;
@@ -284,16 +137,16 @@ body.dark {
     padding: 18px 0;
     text-align: center;
     width: 100%;
-    color: $color_2;
-    border-top: 1px solid var(--grey-color-light);
-    background-color: $background-color_3;
+    color: $background-color_3;
+    border-top: 1px solid $color_1;
+    background-color: $background-color_1;
 
     i {
-        font-size: 20px;
+        font-size: 1.5rem;
     }
 
     span {
-        font-size: 18px;
+        font-size: x-large;
     }
 }
 
@@ -308,23 +161,26 @@ body.dark {
 }
 
 @media screen and (max-width: 768px) {
-    #sidebarOpen {
-        font-size: 25px;
-        display: block;
-        margin-right: 10px;
-        cursor: pointer;
-        color: $color_2;
+    .sidebar{
+       
     }
+    // #sidebarOpen {
+    //     font-size: 25px;
+    //     display: block;
+    //     margin-right: 10px;
+    //     cursor: pointer;
+    //     color: $color_2;
+    // }
 
-    .sidebar.close {
-        left: -100%;
+    // .sidebar.close {
+    //     left: -100%;
 
-        .bottom_content {
-            left: -100%;
-        }
-    }
+    //     .bottom_content {
+    //         left: -100%;
+    //     }
+    // }
 
-    .search_bar {
-        display: none;
-    }
+    // .search_bar {
+    //     display: none;
+    // }
 }
