@@ -1,0 +1,28 @@
+.header {
+  height: 70px;
+  background-color: #CAE8FF;
+  color: #28BFD2;
+  font-size: 20px;
+  display: flex;
+ align-items: center;
+ box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.header-image{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+}
+.header-heading{
+  cursor: pointer;
+  margin-right: 45%;
+}
+.header-list{
+  list-style-type: none;
+  display: flex;
+ align-items: end;
+}
+.header-list li{
+  padding: 20px;
+  cursor: pointer;
+}

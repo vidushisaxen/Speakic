@@ -1,11 +1,12 @@
 import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
 
 const Home = () => {
   return (
     <>
-   <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+   <Header/>
+   <Footer/>
     </>
   )
 }
