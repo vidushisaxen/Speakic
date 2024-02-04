@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Login from './components/login.js';
+import Login from './components/login';
+import NavSide from './components/NavSide'
 function App() {
   return (
    <>
-   <Login/>
+   <NavSide/>
    </>
   );
 }
