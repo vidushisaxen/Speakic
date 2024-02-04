@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/navtop.scss";
 import logo from "../Assets/logo.jpg";
+import { Link } from "react-router-dom"
 const Navtop=()=>{
    return (
      <div class="nav">
@@ -18,7 +19,8 @@ const Navtop=()=>{
        </div>
 
        <div class="nav-links">
-         <a href="">home</a>
+       <Link to="/">Home</Link>
+         {/* <a href="">home</a> */}
          <a href="">about us</a>
          <a href="">contact us</a>
          <a href="">help</a>
