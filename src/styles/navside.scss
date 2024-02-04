@@ -8,7 +8,7 @@ $color_1: #0000004d;
 $color_2: #F4C951;
 $color_3: rgb(44, 43, 43);
 $font-family_1: 'Montserrat', sans-serif;
-$background-color_1: #28BFD2;
+$background-color_1: #033431;
 $background-color_2: #CAEBFF;
 $background-color_3: #D8EEFE;
 $background-color_4: transparent;
@@ -38,7 +38,7 @@ body {
     // top: 91px;
     left: 0;
     height: 100vh;
-    padding: 3rem 2rem 8rem 2rem;
+    padding: 1rem 2rem;
     z-index: -1;
     overflow-y: scroll;
     box-shadow: 0 0 1px $color_3;
@@ -47,30 +47,50 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
-
+.menu_items{
+    border-bottom: $background-color_3 3px solid;
+}
+.logo-item{
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+#logo {
+    width: 40px;
+    height: 40px;
+}
+.nav-title {
+    // display: ;
+    font-family: 'Playfair';
+    font-style: italic;
+    font-size: 2rem;
+    color: $background-color_3;
+    font-weight: bolder;
+}
     .nav_link {
         display: flex;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
         width: 100%;
-        padding: 5px 15px;
+        padding: 5px 0px;
         border-radius: 8px;
         text-decoration: none;
         color: $background-color_3;
         white-space: nowrap;
-        margin-bottom: 4rem;
+        margin: 0.7rem 0;
         font-size: x-large;
     }
 }
 
 .sidebar.close {
-    padding: 50px 0;
+    padding: 1rem 15px;
     width: 80px;
 
     .navlink {
         display: none;
     }
-
+    .nav-title{
+        display: none;
+    }
     .nav_link {
         &:hover {
             background: $color_2;
@@ -135,7 +155,7 @@ body {
     align-items: center;
     left: 0;
     justify-content: space-around;
-    padding: 18px 0;
+    padding: 10px 0;
     text-align: center;
     width: 100%;
     color: $background-color_3;

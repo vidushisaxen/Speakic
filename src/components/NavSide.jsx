@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/navside.scss"; // Assuming SCSS is configured for React
+import logo from "../Assets/logo.jpg";
 
 function NavSide() {
   const [isClose, setIsClose] = useState(true);
@@ -42,6 +43,44 @@ const handleBottomContentClick = () => {
       onMouseLeave={handleSidebarMouseLeave}
     >
       <ul class="menu_items">
+        <li className="item logo-item">
+          <img
+            src={logo}
+            alt=""
+            id="logo"
+            className="rounded-full"
+          />
+          <div class="nav-title ml-5 nav-link">Speakic.</div>
+        </li>
+      </ul>
+      <ul class="menu_items">
+        <li class="item">
+          <a href="#" class="nav_link">
+            <span class="navlink_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/wmwqvixz.json"
+                trigger="hover"
+                state="hover-home-1"
+                colors="primary:#ffedfa"
+              ></lord-icon>
+            </span>
+            <span class="navlink">Home</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="#" class="nav_link">
+            <span class="navlink_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/hrjifpbq.json"
+                trigger="hover"
+                colors="primary:#ffedfa"
+              ></lord-icon>
+            </span>
+            <span class="navlink">Profile</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu_items">
         <li class="item">
           <a href="#" class="nav_link">
             <span class="navlink_icon">
@@ -70,38 +109,63 @@ const handleBottomContentClick = () => {
           <a href="#" class="nav_link">
             <span class="navlink_icon">
               <lord-icon
-                src="https://cdn.lordicon.com/wmwqvixz.json"
+                src="https://cdn.lordicon.com/zyzoecaw.json"
                 trigger="hover"
-                state="hover-home-1"
-                colors="primary:#ffedfa"
-              ></lord-icon>
-            </span>
-            <span class="navlink">Home</span>
-          </a>
-        </li>
-        <li class="item">
-          <a href="#" class="nav_link">
-            <span class="navlink_icon">
-              <lord-icon
-                src="https://cdn.lordicon.com/omiqopzf.json"
-                trigger="morph"
-                state="morph-book"
                 colors="primary:#ffedfa"
               ></lord-icon>
             </span>
             <span class="navlink">Learning</span>
           </a>
         </li>
+      </ul>
+      <ul class="menu_items">
         <li class="item">
           <a href="#" class="nav_link">
             <span class="navlink_icon">
               <lord-icon
-                src="https://cdn.lordicon.com/hrjifpbq.json"
+                src="https://cdn.lordicon.com/ifsxxxte.json"
                 trigger="hover"
                 colors="primary:#ffedfa"
               ></lord-icon>
             </span>
-            <span class="navlink">Profile</span>
+            <span class="navlink">Settings</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="#" class="nav_link">
+            <span class="navlink_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/yxczfiyc.json"
+                trigger="hover"
+                colors="primary:#ffedfa"
+              ></lord-icon>
+            </span>
+            <span class="navlink">About Us</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="#" class="nav_link">
+            <span class="navlink_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/xtzvywzp.json"
+                trigger="hover"
+                colors="primary:#ffedfa"
+              ></lord-icon>
+            </span>
+            <span class="navlink">Contact Us</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="#" class="nav_link">
+            <span class="navlink_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/axteoudt.json"
+                trigger="hover"
+                state="hover-help-center-2"
+                colors="primary:#ffedfa"
+              ></lord-icon>
+            </span>
+            <span class="navlink">Help</span>
           </a>
         </li>
       </ul>
@@ -117,7 +181,8 @@ const handleBottomContentClick = () => {
             <span>Expand</span>
             <lord-icon
               src="https://cdn.lordicon.com/whtfgdfm.json"
-              trigger="hover"
+              trigger="loop-on-hover"
+              delay="2000"
               colors="primary:#ffedfa"
             ></lord-icon>
           </div>
@@ -133,7 +198,7 @@ const handleBottomContentClick = () => {
             <span>Collapse</span>
             <span class="navlink_icon">
               <lord-icon
-                src="https://cdn.lordicon.com/zxvuvcnc.json"
+                src="https://cdn.lordicon.com/nqtddedc.json"
                 trigger="hover"
                 colors="primary:#ffedfa"
               ></lord-icon>
