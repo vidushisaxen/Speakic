@@ -7,11 +7,7 @@ function NavSide() {
   const [showExpandSidebar, setShowExpandSidebar] = useState(true);
   useEffect(() => {
     const handleResize = () => {
-      // if (window.innerWidth < 768) {
-      //   setIsClose(true);
-      // } else {
-      //   setIsClose(false);
-      // }
+      
     };
 
     window.addEventListener("resize", handleResize);
@@ -49,15 +45,11 @@ const handleBottomContentClick = () => {
         <li class="item">
           <a href="#" class="nav_link">
             <span class="navlink_icon">
-              <i class="bx bxs-magic-wand"></i>
-            </span>
-            <span class="navlink">Translation</span>
-          </a>
-        </li>
-        <li class="item">
-          <a href="#" class="nav_link">
-            <span class="navlink_icon">
-              <i class="bx bx-loader-circle"></i>
+              <lord-icon
+                src="https://cdn.lordicon.com/ayhtotha.json"
+                trigger="hover"
+                colors="primary:#ffedfa"
+              ></lord-icon>
             </span>
             <span class="navlink">Conversion</span>
           </a>
@@ -65,7 +57,24 @@ const handleBottomContentClick = () => {
         <li class="item">
           <a href="#" class="nav_link">
             <span class="navlink_icon">
-              <i class="bx bx-filter"></i>
+              <lord-icon
+                src="https://cdn.lordicon.com/qnpnzlkk.json"
+                trigger="hover"
+                colors="primary:#ffedfa"
+              ></lord-icon>
+            </span>
+            <span class="navlink">Translation</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="#" class="nav_link">
+            <span class="navlink_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/wmwqvixz.json"
+                trigger="hover"
+                state="hover-home-1"
+                colors="primary:#ffedfa"
+              ></lord-icon>
             </span>
             <span class="navlink">Home</span>
           </a>
@@ -73,7 +82,12 @@ const handleBottomContentClick = () => {
         <li class="item">
           <a href="#" class="nav_link">
             <span class="navlink_icon">
-              <i class="bx bx-cloud-upload"></i>
+              <lord-icon
+                src="https://cdn.lordicon.com/omiqopzf.json"
+                trigger="morph"
+                state="morph-book"
+                colors="primary:#ffedfa"
+              ></lord-icon>
             </span>
             <span class="navlink">Learning</span>
           </a>
@@ -81,7 +95,11 @@ const handleBottomContentClick = () => {
         <li class="item">
           <a href="#" class="nav_link">
             <span class="navlink_icon">
-              <i class="bx bx-cloud-upload"></i>
+              <lord-icon
+                src="https://cdn.lordicon.com/hrjifpbq.json"
+                trigger="hover"
+                colors="primary:#ffedfa"
+              ></lord-icon>
             </span>
             <span class="navlink">Profile</span>
           </a>
@@ -97,7 +115,11 @@ const handleBottomContentClick = () => {
             }}
           >
             <span>Expand</span>
-            <i className="bx bx-log-in"></i>
+            <lord-icon
+              src="https://cdn.lordicon.com/whtfgdfm.json"
+              trigger="hover"
+              colors="primary:#ffedfa"
+            ></lord-icon>
           </div>
         )}
         {!showExpandSidebar && (
@@ -109,7 +131,13 @@ const handleBottomContentClick = () => {
             }}
           >
             <span>Collapse</span>
-            <i className="bx bx-log-out"></i>
+            <span class="navlink_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/zxvuvcnc.json"
+                trigger="hover"
+                colors="primary:#ffedfa"
+              ></lord-icon>
+            </span>
           </div>
         )}
       </div>
