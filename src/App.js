@@ -1,11 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Login from './components/login.js';
+import Login from './components/login.jsx';
+import Navtop from './components/NavTop';
+import NavSide from './components/NavSide';
 function App() {
   return (
    <>
-   <Login/>
+   <Navtop/>
+   <NavSide></NavSide>
+   {/* <Login></Login> */}
    </>
   );
 }
