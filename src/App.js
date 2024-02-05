@@ -1,12 +1,16 @@
 import './App.css';
 import React from 'react';
-import Home from './components/Home';
+import Login from './components/login';
+import NavSide from './components/NavSide';
+import Conversion from './components/conversion';
 
 function App() {
   return (
-   <>
-   <Home/>
-   </>
+    // <Login></Login>
+    <>
+      <NavSide></NavSide>
+      <Conversion></Conversion>
+    </>
   );
 }
 

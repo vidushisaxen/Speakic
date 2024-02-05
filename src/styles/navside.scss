@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap';
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
 
 $color_1: rgba(0, 0, 0, 0.43);
 $color_2: #FFEDFA;
@@ -16,7 +17,6 @@ $background-color_5: #eee;
 $border-color_1: #fff;
 
 /* Import Google font - Poppins */
-@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
 
 /* navbar */
 /* sidebar */
@@ -37,9 +37,9 @@ body {
     position: fixed;
     // top: 91px;
     left: 0;
-    height: 100vh;
+    height: 100%;
     padding: 1rem 2rem;
-    z-index: -1;
+    z-index: 2;
     overflow-y: scroll;
     box-shadow: 0 0 1px $color_3;
     transition: all 0.5s ease;
