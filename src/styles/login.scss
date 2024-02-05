@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 // @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
-$color_1: #0000004d;
-$color_2: #F4C951;
+$color_1: rgba(0, 0, 0, 0.43);
+$color_2: #FFEDFA;
 $color_3: rgb(44, 43, 43);
 $font-family_1: 'Montserrat', sans-serif;
-$background-color_1: #28BFD2;
-$background-color_2: #CAEBFF;
-$background-color_3: #D8EEFE;
+$background-color_1: #033431;
+$background-color_2: #E9E4E6;
+$background-color_3: #F6F5F5;
 $background-color_4: transparent;
 $background-color_5: #eee;
 $border-color_1: #fff;
@@ -96,19 +96,69 @@ body {
         padding: 0 40px;
         height: 100%;
     }
-
-    input {
-        background-color: $background-color_5;
-        border: none;
-        margin: 8px 0;
-        padding: 10px 15px;
-        font-size: 13px;
-        border-radius: 8px;
-        width: 70%;
-        outline: none;
-    }
+}
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    margin: 15px 0px;
+    width: 100%;
+    max-width: 300px;
 }
 
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $color_1;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: $color_1;
+    pointer-events: none;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-bottom: solid 3px $background-color_1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: $background-color_1;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
 .form-container {
     position: absolute;
     top: 0;
@@ -172,8 +222,17 @@ body {
         width: 40px;
         height: 40px;
     }
-}
 
+    .fa-brands{
+        color: $background-color_1;
+    }
+}
+.icon:hover{
+    background-color: $background-color_1;
+    .fa-brands{
+        color: $background-color_3;
+    }
+}
 .toggle-container {
     position: absolute;
     top: 0;
@@ -215,13 +274,13 @@ body {
 
 .toggle-left {
     transform: translateX(-200%);
-    box-shadow: 25px 0px 68px 3px #28BFD2;
+    // box-shadow: 25px 0px 68px 3px #;
 }
 
 .toggle-right {
     right: 0;
     transform: translateX(0);
-    box-shadow: -25px 0px 68px 3px #28BFD2;
+    // box-shadow: -25px 0px 68px 3px #28BFD2;
 }
 
 #register,
@@ -288,13 +347,13 @@ body {
 
     .toggle-left {
         transform: translateX(-200%);
-        box-shadow: 25px 0px 68px 3px #28BFD2;
+        // box-shadow: 25px 0px 68px 3px #28BFD2;
     }
 
     .toggle-right {
         right: 0;
         transform: translateX(0);
-        box-shadow: -25px 0px 68px 3px #28BFD2;
+        // box-shadow: -25px 0px 68px 3px #28BFD2;
     }
 
     #login,

@@ -34,9 +34,18 @@ const Login = () => {
             </a>
           </div>
           <span className="text-2xl">or use your email for registration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <div class="form__group field">
+              <input type="input" class="form__field" placeholder="Name" required=""/>
+              <label for="name" class="form__label">Name</label>
+          </div>
+          <div class="form__group field">
+              <input type="input" class="form__field" placeholder="E-Mail" required=""/>
+              <label for="name" class="form__label">E-Mail</label>
+          </div>
+          <div class="form__group field">
+              <input type="input" class="form__field" placeholder="Password" required=""/>
+              <label for="name" class="form__label">Password</label>
+          </div>
           <button>Sign Up</button>
         </form>
       </div>
@@ -58,8 +67,14 @@ const Login = () => {
             </a>
           </div>
           <span>or use your email password</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <div class="form__group field">
+              <input type="input" class="form__field" placeholder="E-Mail" required=""/>
+              <label for="name" class="form__label">E-Mail</label>
+          </div>
+          <div class="form__group field">
+              <input type="input" class="form__field" placeholder="Password" required=""/>
+              <label for="name" class="form__label">Password</label>
+          </div>
           <a href="#">Forget Your Password?</a>
           <button>Sign In</button>
         </form>
