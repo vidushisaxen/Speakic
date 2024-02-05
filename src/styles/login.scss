@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 // @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
-$color_1: #0000004d;
-$color_2: #F4C951;
+$color_1: rgba(1, 20, 0, 0.43);
+$color_2: #FFEDFA;
 $color_3: rgb(44, 43, 43);
 $font-family_1: 'Montserrat', sans-serif;
 $background-color_1: #033431;
-$background-color_2: #CAEBFF;
-$background-color_3: #D8EEFE;
+$background-color_2: #E9E4E6;
+$background-color_3: #F6F5F5;
 $background-color_4: transparent;
 $background-color_5: #eee;
 $border-color_1: #fff;
@@ -172,8 +172,17 @@ body {
         width: 40px;
         height: 40px;
     }
-}
 
+    .fa-brands{
+        color: $background-color_1;
+    }
+}
+.icon:hover{
+    background-color: $background-color_1;
+    .fa-brands{
+        color: $background-color_3;
+    }
+}
 .toggle-container {
     position: absolute;
     top: 0;
@@ -215,13 +224,13 @@ body {
 
 .toggle-left {
     transform: translateX(-200%);
-    box-shadow: 25px 0px 68px 3px #28BFD2;
+    // box-shadow: 25px 0px 68px 3px #;
 }
 
 .toggle-right {
     right: 0;
     transform: translateX(0);
-    box-shadow: -25px 0px 68px 3px #28BFD2;
+    // box-shadow: -25px 0px 68px 3px #28BFD2;
 }
 
 #register,
@@ -288,13 +297,13 @@ body {
 
     .toggle-left {
         transform: translateX(-200%);
-        box-shadow: 25px 0px 68px 3px #28BFD2;
+        // box-shadow: 25px 0px 68px 3px #28BFD2;
     }
 
     .toggle-right {
         right: 0;
         transform: translateX(0);
-        box-shadow: -25px 0px 68px 3px #28BFD2;
+        // box-shadow: -25px 0px 68px 3px #28BFD2;
     }
 
     #login,
