@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 // @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
-$color_1: rgba(1, 20, 0, 0.43);
+$color_1: rgba(0, 0, 0, 0.43);
 $color_2: #FFEDFA;
 $color_3: rgb(44, 43, 43);
 $font-family_1: 'Montserrat', sans-serif;
@@ -96,19 +96,69 @@ body {
         padding: 0 40px;
         height: 100%;
     }
-
-    input {
-        background-color: $background-color_5;
-        border: none;
-        margin: 8px 0;
-        padding: 10px 15px;
-        font-size: 13px;
-        border-radius: 8px;
-        width: 70%;
-        outline: none;
-    }
+}
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    margin: 15px 0px;
+    width: 100%;
+    max-width: 300px;
 }
 
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $color_1;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: $color_1;
+    pointer-events: none;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-bottom: solid 3px $background-color_1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: $background-color_1;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
 .form-container {
     position: absolute;
     top: 0;

@@ -4,13 +4,13 @@
 @import 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap';
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
 
-$color_1: #0000004d;
-$color_2: #F4C951;
+$color_1: rgba(0, 0, 0, 0.43);
+$color_2: #FFEDFA;
 $color_3: rgb(44, 43, 43);
 $font-family_1: 'Montserrat', sans-serif;
 $background-color_1: #033431;
-$background-color_2: #CAEBFF;
-$background-color_3: #D8EEFE;
+$background-color_2: #E9E4E6;
+$background-color_3: #F6F5F5;
 $background-color_4: transparent;
 $background-color_5: #eee;
 $border-color_1: #fff;
@@ -126,19 +126,14 @@ body {
         width: calc(100% + 100px);
         left: -20px;
     }
-
-    &:hover {
-        background: $color_2;
-    }
 }
 
 .nav_link {
     &:hover {
-        color: $color_3;
-        background: $color_2;
+        color: $color_2;
+        background: $color_1;
     }
 }
-
 
 .bottom_content {
     position: fixed;
