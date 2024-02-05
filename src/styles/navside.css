@@ -1,0 +1,128 @@
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap';
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Import Google font - Poppins */
+/* navbar */
+/* sidebar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  transition: all 0.5s ease;
+}
+
+.sidebar {
+  background-color: #28BFD2;
+  width: 260px;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  padding: 3rem 2rem 8rem 2rem;
+  z-index: -1;
+  overflow-y: scroll;
+  box-shadow: 0 0 1px rgb(44, 43, 43);
+  transition: all 0.5s ease;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+.sidebar .nav_link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #D8EEFE;
+  white-space: nowrap;
+  margin-bottom: 4rem;
+  font-size: x-large;
+}
+
+.sidebar.close {
+  padding: 60px 0;
+  width: 80px;
+}
+.sidebar.close .navlink {
+  display: none;
+}
+.sidebar.close .nav_link:hover {
+  background: #F4C951;
+  color: #D8EEFE;
+}
+.sidebar.close .bottom_content {
+  width: 50px;
+  left: 15px;
+}
+.sidebar.close .bottom span {
+  display: none;
+}
+
+.navlink_icon {
+  position: relative;
+  font-size: 2rem;
+  min-width: 50px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 6px;
+}
+.navlink_icon::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 100px);
+  left: -20px;
+}
+.navlink_icon:hover {
+  background: #F4C951;
+}
+
+.nav_link:hover {
+  color: rgb(44, 43, 43);
+  background: #F4C951;
+}
+
+.bottom_content {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 260px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.bottom {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0;
+  justify-content: space-around;
+  padding: 18px 0;
+  text-align: center;
+  width: 100%;
+  color: #D8EEFE;
+  border-top: 1px solid rgba(0, 0, 0, 0.3019607843);
+  background-color: #28BFD2;
+}
+.bottom i {
+  font-size: 1.5rem;
+}
+.bottom span {
+  font-size: x-large;
+}
+
+.sidebar.hoverable .collapse_sidebar {
+  display: none;
+}
+
+#sidebarOpen {
+  display: none;
+}/*# sourceMappingURL=navside.css.map */

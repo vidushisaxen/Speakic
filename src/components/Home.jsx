@@ -1,11 +1,14 @@
 import React from 'react';
+import NavSide from './NavSide';
+import NavTop from './NavTop';
+import MainContent from './MainContent';
 
 const Home = () => {
   return (
     <>
-   <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+   <NavSide/>
+   <NavTop/>
+   <MainContent/>
     </>
   )
 }

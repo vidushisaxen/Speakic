@@ -1,12 +1,11 @@
 import './App.css';
 import React from 'react';
-import Login from './components/login.jsx';
-import NavSide from './components/NavSide';
+import Home from './components/Home';
+
 function App() {
   return (
    <>
-   <NavSide></NavSide>
-   {/* <Login></Login> */}
+   <Home/>
    </>
   );
 }
