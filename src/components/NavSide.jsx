@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/navside.scss"; // Assuming SCSS is configured for React
 import logo from "../Assets/logo.jpg";
+import {Link} from'react-router-dom';
 
 function NavSide() {
   const [isClose, setIsClose] = useState(true);
@@ -64,7 +65,8 @@ const handleBottomContentClick = () => {
                 colors="primary:#ffedfa"
               ></lord-icon>
             </span>
-            <span class="navlink">Home</span>
+            <Link to ='/' ><span class="navlink">Home</span> </Link>
+            
           </a>
         </li>
         <li class="item">

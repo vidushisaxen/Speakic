@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "../styles/login.scss";
+import {Link} from 'react-router-dom';
 
 const Login = () => {
   const containerRef = useRef(null);
@@ -46,7 +47,8 @@ const Login = () => {
               <input type="input" class="form__field" placeholder="Password" required=""/>
               <label for="name" class="form__label">Password</label>
           </div>
-          <button>Sign Up</button>
+          <Link to='/home'><button>Sign Up</button></Link>
+          
         </form>
       </div>
       <div className="form-container sign-in">
@@ -76,7 +78,8 @@ const Login = () => {
               <label for="name" class="form__label">Password</label>
           </div>
           <a href="#">Forget Your Password?</a>
-          <button>Sign In</button>
+          <Link to ='/home'><button>Sign In</button></Link>
+          
         </form>
       </div>
       <div className="toggle-container">
