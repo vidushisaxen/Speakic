@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import "../styles/TextToSpeech.scss";
 
 const TextToSpeech = ({ text }) => {
-  const [isPaused, setIsPaused] = useState(false);
-  const [utterance, setUtterance] = useState(null);
-  const [voice, setVoice] = useState(null);
-  const [pitch, setPitch] = useState(1);
-  const [rate, setRate] = useState(1);
-  const [volume, setVolume] = useState(1);
-
+    const [isPaused, setIsPaused] = useState(false);
+    const [utterance, setUtterance] = useState(null);
+    const [voice, setVoice] = useState(null);
+    const [pitch, setPitch] = useState(1);
+    const [rate, setRate] = useState(1);
+    const [volume, setVolume] = useState(1);
+   
   useEffect(() => {
     const synth = window.speechSynthesis;
     const u = new SpeechSynthesisUtterance(text);
@@ -71,63 +72,61 @@ const TextToSpeech = ({ text }) => {
   };
 
   return (
-    <div>
-      <label>
-        Voice:
-        <select value={voice?.name} onChange={handleVoiceChange}>
-          {window.speechSynthesis.getVoices().map((voice) => (
-            <option key={voice.name} value={voice.name}>
-              {voice.name}
-            </option>
-          ))}
-        </select>
-      </label>
-
-      <br />
-
-      <label>
-        Pitch:
-        <input
-          type="range"
-          min="0.5"
-          max="2"
-          step="0.1"
-          value={pitch}
-          onChange={handlePitchChange}
-        />
-      </label>
-
-      <br />
-
-      <label>
-        Speed:
-        <input
-          type="range"
-          min="0.5"
-          max="2"
-          step="0.1"
-          value={rate}
-          onChange={handleRateChange}
-        />
-      </label>
-      <br />
-      <label>
-        Volume:
-        <input
-          type="range"
-          min="0"
-          max="1"
-          step="0.1"
-          value={volume}
-          onChange={handleVolumeChange}
-        />
-      </label>
-
-      <br />
-
-      <button onClick={handlePlay}>{isPaused ? "Resume" : "Play"}</button>
-      <button onClick={handlePause}>Pause</button>
-      <button onClick={handleStop}>Stop</button>
+    <div className="body">
+      <h1>Text To Speech</h1>
+      <div className="content">
+        <div>{text}</div>
+        <div>
+          <label>
+            Voice:
+            <select value={voice?.name} onChange={handleVoiceChange}>
+              {window.speechSynthesis.getVoices().map((voice) => (
+                <option key={voice.name} value={voice.name}>
+                  {voice.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Pitch:
+            <input
+              type="range"
+              min="0.5"
+              max="2"
+              step="0.1"
+              value={pitch}
+              onChange={handlePitchChange}
+            />
+          </label>
+          <label>
+            Speed:
+            <input
+              type="range"
+              min="0.5"
+              max="2"
+              step="0.1"
+              value={rate}
+              onChange={handleRateChange}
+            />
+          </label>
+          <label>
+            Volume:
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value={volume}
+              onChange={handleVolumeChange}
+            />
+          </label>
+        </div>
+        <div>
+          <button onClick={handlePlay}>{isPaused ? "Resume" : "Play"}</button>
+          <button onClick={handlePause}>Pause</button>
+          <button onClick={handleStop}>Stop</button>
+        </div>
+      </div>
     </div>
   );
 };
