@@ -4,6 +4,7 @@ import '../js/card';
 import translator from '../Assets/Translator-Process.png';
 import conversion from '../Assets/conversion.jpg';
 import learning from '../Assets/learning.jpg';
+import {Link} from 'react-router-dom';
 
 const MainContent = () => {
   return (
@@ -14,7 +15,8 @@ const MainContent = () => {
   <div class="back"><img src={learning}/></div>
 </div>
 <div class="container">
-  <div class="front">Translation</div>
+    <Link to = '/translation'> <div class="front">Translation</div></Link>
+ 
   <div class="back"><img src={translator}/></div>
 </div>
 <div class="container">
