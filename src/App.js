@@ -6,6 +6,8 @@ import Login from './components/login';
 import NavSide from './components/NavSide';
 import Home from './components/Home';
 import Translation from './components/Translation';
+
+
 function App() {
   return (
    <>
@@ -13,7 +15,6 @@ function App() {
     <Route path ='/' element ={<Login/>}/>
     <Route path='/home' element={<Home/>}/>
     <Route path ='/translation' element ={<Translation/> }/>
-
    </Routes>
    </>
   );
