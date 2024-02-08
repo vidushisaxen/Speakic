@@ -35,4 +35,17 @@
 .main-content .container .back {
   background-color: #F6F5F5;
   transform: rotateY(-180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content .container {
+    width: 250px;
+    height: 300px;
+    margin-left: 5rem;
+    line-height: 300px;
+  }
 }/*# sourceMappingURL=maincontent.css.map */
