@@ -14,8 +14,6 @@ $background-color_3: #F6F5F5;
 $background-color_4: transparent;
 $background-color_5: #eee;
 $border-color_1: #fff;
-$card-height: 300px;
-$card-width: calc($card-height / 1.5);
 
 * {
     margin: 0;
@@ -41,6 +39,17 @@ $card-width: calc($card-height / 1.5);
 
     .content{
         font-size: 1.5rem;
+
+        .text {
+            border: 4px solid $background-color_1;
+            border-radius: 10px;
+            height: 20vh;
+            width: 90%;
+            padding: 10px;
+            display: block;
+            justify-content: left;
+        }
+
     }
 
 }

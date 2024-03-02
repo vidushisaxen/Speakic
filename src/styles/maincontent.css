@@ -9,11 +9,13 @@
   font-size: 2rem;
   text-align: center;
   line-height: 350px;
-  margin: 2%;
+  margin-left: 40px;
+  margin-top: 70px;
   position: relative;
   transition: transform 1s cubic-bezier(0.3, -1, 1, 1.5);
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  cursor: pointer;
 }
 .main-content .container div {
   height: 100%;

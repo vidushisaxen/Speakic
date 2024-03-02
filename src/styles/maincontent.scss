@@ -14,11 +14,13 @@ $inner-shadow: rgba(0,0,0,.7);
   font-size: 2rem;
   text-align: center;
   line-height: 350px;
-  margin: 2%;
+  margin-left: 40px;
+  margin-top: 70px;
   position: relative;
   transition: transform $tranisition-duration $tranisition-timing-function;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  cursor: pointer;
     div {
     height: 100%;
     width: 100%;
