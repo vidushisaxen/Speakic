@@ -75,7 +75,12 @@ const TextToSpeech = ({ text }) => {
     <div className="body">
       <h1>Text To Speech</h1>
       <div className="content">
-        <div>{text}</div>
+        <input
+          className="text"
+          type={"text"}
+          placeholder="Enter text here..."
+          autoFocus
+        />
         <div>
           <label>
             Voice:

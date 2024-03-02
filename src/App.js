@@ -17,8 +17,9 @@ function App() {
     <Route path ='/' element ={<Login/>}/>
     <Route path='/home' element={<Home/>}/>
     <Route path ='/translation' element ={<Translation/> }/>
-
+    
    </Routes>
+   {/* <TextToSpeech></TextToSpeech> */}
    </>
   );
 }
