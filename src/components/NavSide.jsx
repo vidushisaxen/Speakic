@@ -92,7 +92,7 @@ const handleBottomContentClick = () => {
                 colors="primary:#ffedfa"
               ></lord-icon>
             </span>
-            <span class="navlink">Conversion</span>
+           <span class="navlink">Conversion</span>
           </a>
         </li>
         <li class="item">
@@ -104,7 +104,7 @@ const handleBottomContentClick = () => {
                 colors="primary:#ffedfa"
               ></lord-icon>
             </span>
-            <span class="navlink">Translation</span>
+            <Link to = '/translation'><span class="navlink">Translation</span></Link>
           </a>
         </li>
         <li class="item">

@@ -19,13 +19,13 @@ body {
 }
 
 .sidebar {
-  background-color: #28BFD2;
+  background-color: #033431;
   width: 260px;
   position: fixed;
   left: 0;
-  height: 100vh;
-  padding: 3rem 2rem 8rem 2rem;
-  z-index: -1;
+  height: 100%;
+  padding: 1rem 2rem 2.5rem 2rem;
+  z-index: 2;
   overflow-y: scroll;
   box-shadow: 0 0 1px rgb(44, 43, 43);
   transition: all 0.5s ease;
@@ -33,29 +33,50 @@ body {
 .sidebar::-webkit-scrollbar {
   display: none;
 }
+.sidebar .menu_items {
+  border-bottom: #F6F5F5 3px solid;
+}
+.sidebar .logo-item {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.sidebar #logo {
+  width: 40px;
+  height: 40px;
+}
+.sidebar .nav-title {
+  font-family: "Playfair";
+  font-style: italic;
+  font-size: 2rem;
+  color: #F6F5F5;
+  font-weight: bolder;
+}
 .sidebar .nav_link {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 4px 15px;
+  padding: 5px 0px;
   border-radius: 8px;
   text-decoration: none;
-  color: #D8EEFE;
+  color: #F6F5F5;
   white-space: nowrap;
-  margin-bottom: 4rem;
+  margin: 0.7rem 0;
   font-size: x-large;
 }
 
 .sidebar.close {
-  padding: 60px 0;
+  padding: 1rem 15px;
   width: 80px;
 }
 .sidebar.close .navlink {
   display: none;
 }
+.sidebar.close .nav-title {
+  display: none;
+}
 .sidebar.close .nav_link:hover {
-  background: #F4C951;
-  color: #D8EEFE;
+  background: #033431;
+  color: #FFEDFA;
 }
 .sidebar.close .bottom_content {
   width: 50px;
@@ -81,13 +102,10 @@ body {
   width: calc(100% + 100px);
   left: -20px;
 }
-.navlink_icon:hover {
-  background: #F4C951;
-}
 
 .nav_link:hover {
-  color: rgb(44, 43, 43);
-  background: #F4C951;
+  color: #FFEDFA;
+  background: rgba(0, 0, 0, 0.43);
 }
 
 .bottom_content {
@@ -105,12 +123,13 @@ body {
   align-items: center;
   left: 0;
   justify-content: space-around;
-  padding: 18px 0;
+  padding: 10px 0;
   text-align: center;
+  margin-top: 10px;
   width: 100%;
-  color: #D8EEFE;
-  border-top: 1px solid rgba(0, 0, 0, 0.3019607843);
-  background-color: #28BFD2;
+  color: #F6F5F5;
+  border-top: 1px solid rgba(0, 0, 0, 0.43);
+  background-color: #033431;
 }
 .bottom i {
   font-size: 1.5rem;
