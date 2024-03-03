@@ -36,6 +36,7 @@ $card-width: calc($card-height / 1.5);
 }
 .logo{
     width: 80px;
+    margin-top: 60vh;
 }
 .heading{
     color: $background-color_1;
@@ -57,5 +58,28 @@ $card-width: calc($card-height / 1.5);
             font-size: 1rem;
             margin-bottom: 20px;
         }
+    }
+}
+.accordion {
+    cursor: pointer;
+    // padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5rem;
+    transition: 0.4s;
+    .accordion-title{
+        border-radius: 5px;
+        margin-top: 2rem;
+        width: 100%;
+        text-align: left;
+        font-weight: 600;
+    lord-icon{
+        float: right;
+    }
+    }
+    .accordion-content{
+        font-size: 1.3rem;
     }
 }
