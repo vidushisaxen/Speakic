@@ -14,10 +14,6 @@ const MainContent = () => {
   return (
     <>
       <div className="body grid grid-cols-2 gap-4 md:grid-cols-1 ">
-        {/* <div class="container">
-          <div class="front">Learning</div>
-          <div class="back"><img src={learning}/></div>
-        </div> */}
         <a href="#" alt="To Text" target="_blank">
           <div class="card">
             <div class="wrapper">
@@ -45,20 +41,6 @@ const MainContent = () => {
             <img src={conversion3} class="character" id="text" />
           </div>
         </a>
-        {/* <div class="container">
-          <Link to="/translation">
-            <div class="front">Translation</div>
-          </Link>
-          <div class="back">
-            <img src={translator} />
-          </div>
-        </div>
-        <div class="container">
-          <div class="front">Conversion</div>
-          <div class="back">
-            <img src={conversion} />
-          </div>
-        </div> */}
       </div>
     </>
   );
