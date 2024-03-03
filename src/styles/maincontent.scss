@@ -1,61 +1,149 @@
-$tranisition-duration: 1s;
-$tranisition-timing-function: cubic-bezier(.3, -1, 1, 1.5);
-$front-bg-color:#F6F5F5;
-$back-bg-color: #F6F5F5;
-$inner-shadow: rgba(0,0,0,.7);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap';
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
 
-.main-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-.container {
-  width: 300px;
-  height: 350px;
-  font-size: 2rem;
-  text-align: center;
-  line-height: 350px;
-  margin-left: 40px;
-  margin-top: 70px;
+$color_1: rgba(0, 0, 0, 0.43);
+$color_2: #FFEDFA;
+$color_3: rgb(44, 43, 43);
+$font-family_1: 'Montserrat', sans-serif;
+$background-color_1: #033431;
+$background-color_2: #E9E4E6;
+$background-color_3: #F6F5F5;
+$background-color_4: transparent;
+$background-color_5: #eee;
+$border-color_1: #fff;
+$card-height: 450px;
+$card-width: calc($card-height / 1.5);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family_1;
+}
+
+.body {
+  width: calc(100vw - 80px);
+  height: 100vh;
   position: relative;
-  transition: transform $tranisition-duration $tranisition-timing-function;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  cursor: pointer;
-    div {
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    position: absolute;
-    backface-visibility: hidden;
-  }
-  
-    &:hover {
-    transform: rotateY(180deg);
-  }
-  
-  .front {
-    background-color: $front-bg-color;
-    z-index: 1;
-  }
-
-  .back {
-    background-color: $back-bg-color;
-    transform: rotateY(-180deg);
-  }
-}
+  left: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 768px){
-  .main-content{
+// cards
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+
+.title {
+  // width: 100%;
+  font-family: 'Playfair';
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: $background-color_3;
+  transition: transform 0.5s;
+}
+
+.card:hover .title {
+  font-size: 3rem;
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  // aspect-ratio: 4/3;
+  // height: 200px;
+  opacity: 0;
+  transition: all 0.5s;
+  // bottom: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+#text {
+  bottom: 80px;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+  filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.75));
+}
+
+@media screen and (max-width: 650px) {
+  .body {
     display: flex;
     flex-direction: column;
-
-  }
-  .main-content .container{
-    width:  250px;
-    height: 300px;
-    margin-left: 5rem;
-    line-height: 300px;
   }
 }
