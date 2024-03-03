@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../styles/TextToSpeech.scss";
-const text =
-  "Text-to-speech feature is now available on relatively any website or blog. It's a game changer that you can listen to the content instead of reading it. Especially effective for people with visual or cognitive impairments or on the go. I came up with the idea to implement it for my blog, so this is how I started researching this topic which ended up being a tutorial for you. So in this tutorial, we will go through the process of building a text-to-speech component in React. We will use the `Web Speech API` to implement the text-to-speech functionality.";
 
 const TextToSpeech = ({ text }) => {
   const [isPaused, setIsPaused] = useState(false);
@@ -74,67 +71,79 @@ const TextToSpeech = ({ text }) => {
   };
 
   return (
-    <div>
-      <p>{text}</p>
-
-      <label>
-        Voice:
-        <select value={voice?.name} onChange={handleVoiceChange}>
-          {window.speechSynthesis.getVoices().map((voice) => (
-            <option key={voice.name} value={voice.name}>
-              {voice.name}
-            </option>
-          ))}
-        </select>
-      </label>
-
-      <br />
-
-      <label>
-        Pitch:
-        <input
-          type="range"
-          min="0.5"
-          max="2"
-          step="0.1"
-          value={pitch}
-          onChange={handlePitchChange}
-        />
-      </label>
-
-      <br />
-
-      <label>
-        Speed:
-        <input
-          type="range"
-          min="0.5"
-          max="2"
-          step="0.1"
-          value={rate}
-          onChange={handleRateChange}
-        />
-      </label>
-      <br />
-      <label>
-        Volume:
-        <input
-          type="range"
-          min="0"
-          max="1"
-          step="0.1"
-          value={volume}
-          onChange={handleVolumeChange}
-        />
-      </label>
-
-      <br />
-
-      <button onClick={handlePlay}>{isPaused ? "Resume" : "Play"}</button>
-      <button onClick={handlePause}>Pause</button>
-      <button onClick={handleStop}>Stop</button>
-    </div>
+    <>
+      <div className="my-7 grid grid-cols-4 gap-5 lg:grid-cols-4  md:grid-cols-2 sm:grid-cols-1">
+        <label>
+          Voice:
+          <select value={voice?.name} onChange={handleVoiceChange}>
+            {window.speechSynthesis.getVoices().map((voice) => (
+              <option key={voice.name} value={voice.name}>
+                {voice.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Pitch:
+          <input
+            type="range"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value={pitch}
+            onChange={handlePitchChange}
+          />
+        </label>
+        <label>
+          Speed:
+          <input
+            type="range"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value={rate}
+            onChange={handleRateChange}
+          />
+        </label>
+        <label>
+          Volume:
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value={volume}
+            onChange={handleVolumeChange}
+          />
+        </label>
+      </div>
+      <div className="control-pannel">
+        <button onClick={handlePlay}>
+          <lord-icon
+            src="https://cdn.lordicon.com/becebamh.json"
+            trigger="hover"
+            colors="primary:#033431"
+          ></lord-icon>
+        </button>
+        <button onClick={handlePause}>
+          <lord-icon
+            src="https://cdn.lordicon.com/jctchmfs.json"
+            trigger="hover"
+            colors="primary:#033431"
+          ></lord-icon>
+        </button>
+        <button onClick={handleStop}>
+          <lord-icon
+            src="https://cdn.lordicon.com/ogkflacg.json"
+            trigger="hover"
+            colors="primary:#033431"
+          ></lord-icon>
+        </button>
+      </div>
+    </>
   );
 };
+
+
 
 export default TextToSpeech;
