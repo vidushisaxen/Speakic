@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../styles/contactus.scss";
-import logo from "../Assets/logo.jpg"
+import logo from "../Assets/logo.jpg";
+import NavSide from "./NavSide";
+
 const ContactUs= ()=>{
  function Accordion({ title, content }) {
    const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +10,7 @@ const ContactUs= ()=>{
    const handleClick = () => {
      setIsOpen(!isOpen);
    };
-
+ 
    return (
      <div className="accordion-item">
        <button className="accordion-title" onClick={handleClick}>
@@ -31,6 +33,7 @@ const ContactUs= ()=>{
   ];
      return (
        <>
+        <NavSide></NavSide>
          <div className="contact-body">
            <img src={logo} className="logo rounded-full" alt="Speakic" />
            <div className="text-5xl leading-10 heading">
@@ -39,7 +42,7 @@ const ContactUs= ()=>{
            <div className="text-xl leading-10">
              Let us know how we can help.
            </div>
-           <div className="my-16 grid grid-cols-4 gap-16 lg:grid-cols-4  md:grid-cols-2 sm:grid-cols-1">
+           <div className="my-16 grid grid-cols-4 gap-10 lg:grid-cols-4  md:grid-cols-2">
              <div className="box w-100 p-5">
                <lord-icon
                  src="https://cdn.lordicon.com/ayhtotha.json"
@@ -114,7 +117,7 @@ const ContactUs= ()=>{
              </div>
            </div>
            <div>
-             <div className="text-5xl leading-10 heading">
+             <div className="text-5xl leading-10 heading mb-6 ml-4">
                Frequently Asked Questions
              </div>
              <div className="accordion">
