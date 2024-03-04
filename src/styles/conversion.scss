@@ -23,7 +23,7 @@ $card-width: calc($card-height / 1.5);
     font-family: $font-family_1;
 }
 
-.body{
+.conversion-body{
     width: calc(100vw - 80px);
     height: 100vh;
     position: relative;
@@ -35,7 +35,7 @@ $card-width: calc($card-height / 1.5);
 
 // cards
 
-.card {
+.conversion-card {
     width: $card-width;
     height: $card-height;
     position: relative;
@@ -47,28 +47,28 @@ $card-width: calc($card-height / 1.5);
     margin: 0 50px;
 }
 
-.cover-image {
+.conversion-cover-image {
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
 
-.wrapper {
+.conversion-wrapper {
     transition: all 0.5s;
     position: absolute;
     width: 100%;
     z-index: -1;
 }
 
-.card:hover .wrapper {
+.conversion-card:hover .conversion-wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 }
 
-.wrapper::before,
-.wrapper::after {
+.conversion-wrapper::before,
+.conversion-wrapper::after {
     content: "";
     opacity: 0;
     width: 100%;
@@ -78,7 +78,7 @@ $card-width: calc($card-height / 1.5);
     left: 0;
 }
 
-.wrapper::before {
+.conversion-wrapper::before {
     top: 0;
     height: 100%;
     background-image: linear-gradient(to top,
@@ -87,7 +87,7 @@ $card-width: calc($card-height / 1.5);
             rgba(12, 13, 19) 97%);
 }
 
-.wrapper::after {
+.conversion-wrapper::after {
     bottom: 0;
     opacity: 1;
     background-image: linear-gradient(to bottom,
@@ -96,16 +96,16 @@ $card-width: calc($card-height / 1.5);
             rgba(12, 13, 19) 97%);
 }
 
-.card:hover .wrapper::before,
-.wrapper::after {
+.conversion-card:hover .conversion-wrapper::before,
+.conversion-wrapper::after {
     opacity: 1;
 }
 
-.card:hover .wrapper::after {
+.conversion-card:hover .conversion-wrapper::after {
     height: 120px;
 }
 
-.title {
+.conversion-title {
     // width: 100%;
     font-family: 'Playfair';
     font-size: 2.5rem;
@@ -114,12 +114,12 @@ $card-width: calc($card-height / 1.5);
     transition: transform 0.5s;
 }
 
-.card:hover .title {
+.conversion-card:hover .conversion-title {
     font-size: 3rem;
     transform: translate3d(0%, -50px, 100px);
 }
 
-.character {
+.conversion-character {
     width: 100%;
     // aspect-ratio: 4/3;
     // height: 200px;
@@ -132,14 +132,14 @@ $card-width: calc($card-height / 1.5);
 #text{
     bottom: 80px;
 }
-.card:hover .character {
+.conversion-card:hover .conversion-character {
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
     filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.75));
 }
 
 @media screen and (max-width: 650px){
-    .body{
+    .conversion-body{
         display: flex;
         flex-direction: column;
     }

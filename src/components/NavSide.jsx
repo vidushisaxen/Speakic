@@ -51,12 +51,12 @@ const handleBottomContentClick = () => {
             id="logo"
             className="rounded-full"
           />
-          <div class="nav-title ml-5 nav-link">Speakic.</div>
+          <Link to='/' className="nav_link"><div class="nav-title ml-5 nav-link">Speakic.</div></Link>
         </li>
       </ul>
       <ul class="menu_items">
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to ='/' className="nav_link" >
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/wmwqvixz.json"
@@ -65,12 +65,11 @@ const handleBottomContentClick = () => {
                 colors="primary:#ffedfa"
               ></lord-icon>
             </span>
-            <Link to ='/' ><span class="navlink">Home</span> </Link>
-            
-          </a>
-        </li>
+            <span class="navlink">Home</span> 
+            </Link>
+          </li>
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to='/profile' className="nav_link">
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/hrjifpbq.json"
@@ -79,12 +78,12 @@ const handleBottomContentClick = () => {
               ></lord-icon>
             </span>
             <span class="navlink">Profile</span>
-          </a>
+            </Link>
         </li>
       </ul>
       <ul class="menu_items">
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to='/conversion' className="nav_link">
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/ayhtotha.json"
@@ -93,10 +92,10 @@ const handleBottomContentClick = () => {
               ></lord-icon>
             </span>
            <span class="navlink">Conversion</span>
-          </a>
+           </Link>
         </li>
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to = '/translation' className="nav_link">
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/qnpnzlkk.json"
@@ -104,11 +103,11 @@ const handleBottomContentClick = () => {
                 colors="primary:#ffedfa"
               ></lord-icon>
             </span>
-            <Link to = '/translation'><span class="navlink">Translation</span></Link>
-          </a>
+            <span class="navlink">Translation</span>
+            </Link>
         </li>
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to='/' className="nav_link">
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/zyzoecaw.json"
@@ -117,12 +116,12 @@ const handleBottomContentClick = () => {
               ></lord-icon>
             </span>
             <span class="navlink">Learning</span>
-          </a>
+            </Link>
         </li>
       </ul>
       <ul class="menu_items">
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to='/settings' className="nav_link">
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/ifsxxxte.json"
@@ -131,10 +130,10 @@ const handleBottomContentClick = () => {
               ></lord-icon>
             </span>
             <span class="navlink">Settings</span>
-          </a>
+            </Link>
         </li>
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to ="/aboutus" className="nav_link">
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/yxczfiyc.json"
@@ -142,11 +141,11 @@ const handleBottomContentClick = () => {
                 colors="primary:#ffedfa"
               ></lord-icon>
             </span>
-            <span class="navlink">About Us</span>
-          </a>
+           <span class="navlink">About Us</span>
+           </Link>
         </li>
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to='/contactus' className="nav_link">
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/xtzvywzp.json"
@@ -155,10 +154,10 @@ const handleBottomContentClick = () => {
               ></lord-icon>
             </span>
             <span class="navlink">Contact Us</span>
-          </a>
+            </Link>
         </li>
         <li class="item">
-          <a href="#" class="nav_link">
+        <Link to='/help' className="nav_link">
             <span class="navlink_icon">
               <lord-icon
                 src="https://cdn.lordicon.com/axteoudt.json"
@@ -168,7 +167,7 @@ const handleBottomContentClick = () => {
               ></lord-icon>
             </span>
             <span class="navlink">Help</span>
-          </a>
+            </Link>
         </li>
       </ul>
       <div className="bottom_content" onClick={handleBottomContentClick}>

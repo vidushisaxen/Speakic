@@ -1,12 +1,9 @@
-import React from "react";
-import "../styles/InformationPage.scss";
+import React from 'react'
 
-const Info=()=>{
-    return(
-        <>
-            
-        </>
-    );
+const InformationPage = () => {
+  return (
+    <div>InformationPage</div>
+  )
 }
 
-export default Info;
+export default InformationPage

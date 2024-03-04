@@ -31,7 +31,7 @@ const ContactUs= ()=>{
   ];
      return (
        <>
-         <div className="body">
+         <div className="contact-body">
            <img src={logo} className="logo rounded-full" alt="Speakic" />
            <div className="text-5xl leading-10 heading">
              Contact our friendly team
@@ -90,7 +90,7 @@ const ContactUs= ()=>{
                    href="mailto:vidushisaxena@gmail.com"
                    target={"_blank"}
                  >
-                   Viwe on Google Maps
+                   View on Google Maps
                  </a>
                </div>
              </div>
@@ -131,5 +131,4 @@ const ContactUs= ()=>{
        </>
      );
 }
-// may add footer
 export default ContactUs;

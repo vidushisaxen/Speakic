@@ -90,7 +90,7 @@ const Translation = () => {
     <>
     <div className="translate-component">
       <div className="translation-container">
-        <div className="wrapper">
+        <div className="traslation-wrapper">
           <div className="text-input">
             <textarea
               spellCheck="false"
