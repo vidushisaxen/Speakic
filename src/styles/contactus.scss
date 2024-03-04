@@ -29,6 +29,7 @@ $card-width: calc($card-height / 1.5);
     height: 100vh;
     position: relative;
     left: 80px;
+    top: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,7 +72,7 @@ $card-width: calc($card-height / 1.5);
     transition: 0.4s;
     .accordion-title{
         border-radius: 5px;
-        margin-top: 2rem;
+        margin: 2rem;
         width: 100%;
         text-align: left;
         font-weight: 600;
@@ -83,3 +84,8 @@ $card-width: calc($card-height / 1.5);
         font-size: 1.3rem;
     }
 }
+// @media (max-width: 640px) {
+//     .sm\:grid-cols-1 {
+//     grid-template-columns: repeat(1, minmax(0, 1fr));
+// }
+// }

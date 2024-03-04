@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/translations.scss";
 import countries from "../js/data";
-
+import NavSide from "./NavSide";
 const Translation = () => {
   useEffect(() => {
     const fromText = document.querySelector(".from-text");
@@ -88,6 +88,7 @@ const Translation = () => {
 
   return (
     <>
+    <NavSide></NavSide>
     <div className="translate-component">
       <div className="translation-container">
         <div className="traslation-wrapper">
