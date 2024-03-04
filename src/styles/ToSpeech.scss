@@ -31,7 +31,7 @@ $border-color_1: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column;
     .heading {
         font-size: 3.5rem;
         font-weight: bolder;
