@@ -28,28 +28,39 @@ $border-color_1: #fff;
     position: relative;
     padding: 25px;
     left: 80px;
-    display: block;
+    display: flex;
     align-items: center;
+    justify-content: center;
 
-    h1{
+    .heading {
         font-size: 3.5rem;
         font-weight: bolder;
         color: $background-color_1;
     }
-
-    .content{
-        font-size: 1.5rem;
-
-        .text {
-            border: 4px solid $background-color_1;
-            border-radius: 10px;
-            height: 20vh;
-            width: 90%;
-            padding: 10px;
-            display: block;
-            justify-content: left;
-        }
-
+    textarea {
+        border: 4px solid $background-color_1;
+        border-radius: 10px;
+        height: 20vh;
+        width: 70%;
+        padding: 10px;
+        display: block;
+        justify-content: left;
     }
+}
+.control-pannel{
+    button{
+        border: #033431 2px solid;
+        border-radius: 5px;
+        margin: 10px 20px;
+        padding: 10px 10px 7px;
 
+        lord-icon{
+
+        }
+    }
+}
+@media (min-width: 40px) {
+    .sm\:grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }

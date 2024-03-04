@@ -5,14 +5,10 @@ import text1 from "../Assets/text1.png";
 import text2 from "../Assets/text2.jpg";
 import speech2 from "../Assets/speech2.jpg";
 import speech3 from "../Assets/speech3.png";
-import TextToSpeech from "./TextToSpeech";
 
 const Conversion=()=>{
-    
     return (
       <div className="body grid grid-cols-2 gap-4 md:grid-cols-1 ">
-        {/* <TextToSpeech text={text} /> */}
-
         <a href="#" alt="to speech" target="_blank">
           <div class="card">
             <div class="wrapper">
