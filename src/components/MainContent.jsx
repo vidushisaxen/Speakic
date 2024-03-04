@@ -23,24 +23,25 @@ const MainContent = () => {
             <img src={learning3} class="main-content-character" id="text" />
           </div>
         {/* </a> */}
-        {/* <a href="#" alt="To Text" target="_blank"> */}
+        <Link to='/translation'>
           <div class="main-content-card">
             <div class="main-content-wrapper">
               <img src={translator1} class="main-content-cover-image" />
             </div>
-            <Link to='/translation'><h2 className="main-content-title">TRANSLATE</h2></Link>
+           <h2 className="main-content-title">TRANSLATE</h2>
             <img src={translator3} class="main-content-character" id="text" />
           </div>
-        {/* </a> */}
-        {/* <a href="#" alt="To Text" target="_blank"> */}
+          </Link>
+          <Link to='/conversion'>
           <div class="main-content-card">
             <div class="main-content-wrapper">
               <img src={conversion1} class="main-content-cover-image" />
             </div>
-            <Link to='/conversion'><h2 className="main-content-title">CONVERT</h2></Link>
+            <h2 className="main-content-title">CONVERT</h2>
             <img src={conversion3} class="main-content-character" id="text" />
           </div>
-        {/* </a> */}
+          </Link>
+        
       </div>
     </>
   );
