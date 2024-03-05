@@ -16,22 +16,24 @@ const Conversion=()=>{
             <div class="conversion-wrapper">
               <img src={speech2} class="conversion-cover-image" />
             </div>
-            <Link to="/tospeech">
+            
               <h2 className="conversion-title">SPEECH</h2>
-            </Link>
             <img src={speech3} class="conversion-character" />
           </div>
           {/* </a> */}
 
           {/* <a href="#" alt="To Text" target="_blank"> */}
+          
           <div class="conversion-card">
             <div class="conversion-wrapper">
               <img src={text2} class="conversion-cover-image" />
             </div>
+            <Link to="/tospeech">
             <h2 className="conversion-title">TEXT</h2>
+            </Link>
             <img src={text1} class="conversion-character" id="text" />
           </div>
-          {/* </a> */}
+          
         </div>
       </>
     );
